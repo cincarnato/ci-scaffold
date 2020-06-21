@@ -1,11 +1,11 @@
 require('dotenv').config();
 import express from 'express';
-import {} from './mongo-db'
+//const express = require('express')
+import './mongo-db'
 import {ApolloServer, GraphQLExtension} from 'apollo-server-express'
 import {resolvers, typeDefs} from './modules-merge'
 
-import {api} from 'ci-user-module'
-const {jwtMiddleware, corsMiddleware, rbacMiddleware, sessionMiddleware} = api
+import {jwtMiddleware, corsMiddleware, rbacMiddleware, sessionMiddleware} from '@ci-user-module/api'
 
 import {expressRequestLogger, graphqlErrorLogger, graphqlResponseLogger} from './logger'
 

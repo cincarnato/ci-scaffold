@@ -15,7 +15,7 @@
     "apollo-upload-client": "^13.0.0",
     "chart.js": "^2.9.3",
     "chartjs-plugin-labels": "^1.1.0",
-    "@ci-user-module/frontend": "^1.0.7",
+    "@ci-user-module/frontend": "^1.0.9",
     "core-js": "^3.6.5",
     "graphql": "^15.0.0",
     "jwt-decode": "^2.2.0",
@@ -27,7 +27,8 @@
     "vue-map-chart": "0.0.2",
     "vue-router": "^3.3.2",
     "vuetify": "^2.2.11",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "vuex-persistedstate": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

@@ -13,7 +13,7 @@ import {
     CUSTOMIZATION_COLORS_UPDATE,
     CUSTOMIZATION_LANG_UPDATE,
     CUSTOMIZATION_LOGO_UPDATE
-} from "../../../security/permissions";
+} from "../../permissions";
 
 export default {
     Query: {

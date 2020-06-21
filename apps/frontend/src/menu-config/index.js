@@ -28,21 +28,21 @@ export default [
             {
                 icon: 'assignment_ind',
                 text: i18n.t('user.title'),
-                link: { name: "usersAdmin" },
+                link: { name: "userManagement" },
                 panel: false,
                 permission: 'SECURITY_USER_SHOW'
             },
             {
                 icon: 'verified_user',
                 text: i18n.t('role.title'),
-                link: { name: "rolesAdmin" },
+                link: { name: "roleManagement" },
                 panel: false,
                 permission: 'SECURITY_ROLE_SHOW'
             },
             {
                 icon: 'group',
                 text: i18n.t('group.title'),
-                link: { name: "groupsAdmin" },
+                link: { name: "groupManagement" },
                 panel: false,
                 permission: 'SECURITY_GROUP_SHOW'
             },

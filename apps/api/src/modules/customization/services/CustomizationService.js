@@ -2,7 +2,7 @@ import Customization from '../models/CustomizationModel'
 import {UserInputError} from 'apollo-server-express'
 import path from "path";
 import fs from "fs";
-import {User} from "../../security/models/UserModel";
+
 
 const mongoose = require('mongoose');
 
