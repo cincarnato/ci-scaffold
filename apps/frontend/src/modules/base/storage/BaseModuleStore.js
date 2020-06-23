@@ -19,8 +19,8 @@ export default {
         ping({commit}) {
             let begin = Date.now()
             baseProvider.ping().then(r => {
-                let time = begin - Date.now()
-                commit('setServerStatus', r.data.status)
+                let time =  Date.now() - begin
+                commit('setServerStatus', r.data.ping.status)
                 commit('setServerTime', time)
 
             }).catch(e => {

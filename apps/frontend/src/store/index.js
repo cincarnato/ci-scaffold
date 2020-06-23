@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import {UserModuleStore} from '@ci-user-module/frontend'
+import {CustomizationStore} from '@ci-custom-module/frontend'
+import BaseModuleStore from '../modules/base/storage/BaseModuleStore'
 
 Vue.use(Vuex)
 
@@ -8,7 +10,9 @@ import createPersistedState from "vuex-persistedstate";
 
 export default new Vuex.Store({
     modules:{
-        user: UserModuleStore
+        user: UserModuleStore,
+        base: BaseModuleStore,
+        customization: CustomizationStore
     },
     plugins: [
         createPersistedState({
@@ -20,7 +24,11 @@ export default new Vuex.Store({
                         access_token: state.user.access_token,
                         me: state.user.me
                     },
-
+                    customization: {
+                        colors: state.customization.colors,
+                        logo: state.customization.logo,
+                        language: state.customization.language
+                    },
                 })
         })
     ]

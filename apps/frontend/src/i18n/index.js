@@ -3,9 +3,14 @@ import VueI18n from 'vue-i18n'
 import merge from 'deepmerge'
 
 import baseMessages from '../modules/base/i18n/messages'
-import {i18nMessages} from '@ci-user-module/frontend'
+import {i18nMessages as i18nMessagesUser} from '@ci-user-module/frontend'
+import {i18nMessages as i18nMessagesCustom} from '@ci-custom-module/frontend'
 
-const messages = merge.all([baseMessages, i18nMessages])
+const messages = merge.all([
+    baseMessages,
+    i18nMessagesUser,
+    i18nMessagesCustom
+])
 
 Vue.use(VueI18n)
 

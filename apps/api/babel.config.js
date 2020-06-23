@@ -7,7 +7,7 @@ module.exports = function (api) {
 
     return {
         exclude: [],
-        ignore: [/node_modules\/(?!\@ci-user-module)/],
+        ignore: [/node_modules\/(?!\@ci-user-module|\@ci-custom-module)/],
         presets,
     };
 };

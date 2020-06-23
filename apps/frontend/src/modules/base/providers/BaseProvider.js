@@ -1,3 +1,4 @@
+import apolloClient from '../../../apollo'
 class BaseProvider {
 
     constructor() {
@@ -17,5 +18,5 @@ class BaseProvider {
 
 }
 const baseProvider = new BaseProvider()
-
+baseProvider.setGqlc(apolloClient)
 export default baseProvider

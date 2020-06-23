@@ -7,9 +7,16 @@ import router from "./router";
 
 import apolloClient from './apollo'
 import {setGraphQlClientToProviders} from '@ci-user-module/frontend'
+import {customizationProvider} from '@ci-custom-module/frontend'
 setGraphQlClientToProviders(apolloClient)
+customizationProvider.setGqlc(apolloClient)
 
 Vue.config.productionTip = false
+
+//Customization instances inject
+store.commit('setVuetifyInstance', vuetify)
+store.commit('setI18nInstance',i18n)
+store.dispatch('loadCustomizations')
 
 new Vue({
   vuetify,

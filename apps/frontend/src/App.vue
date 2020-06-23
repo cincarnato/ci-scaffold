@@ -2,7 +2,8 @@
     <v-app>
         <layout :menu="menu">
             <template v-slot:toolbar-left>
-                a
+                <logo-toolbar></logo-toolbar>
+                <title-toolbar></title-toolbar>
             </template>
 
             <template v-slot:toolbar-right>
@@ -21,10 +22,11 @@
     import Layout from "./layout/Layout";
     import menuConfig from './menu-config'
     import {DashboardButton, AppBarUserMenu} from '@ci-user-module/frontend'
+    import {LogoToolbar,TitleToolbar} from '@ci-custom-module/frontend'
 
     export default {
         name: 'App',
-        components: {Layout,DashboardButton,AppBarUserMenu},
+        components: {Layout,DashboardButton,AppBarUserMenu,LogoToolbar,TitleToolbar},
         data(){
             return {
                 menu: menuConfig

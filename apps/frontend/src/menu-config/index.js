@@ -26,6 +26,13 @@ export default [
                 permission: 'SECURITY_DASHBOARD_SHOW'
             },
             {
+                icon: 'settings_applications',
+                text: 'Customization',
+                link: { name: "customization" },
+                panel: false,
+                permission: 'CUSTOMIZATION_SHOW'
+            },
+            {
                 icon: 'assignment_ind',
                 text: i18n.t('user.title'),
                 link: { name: "userManagement" },
