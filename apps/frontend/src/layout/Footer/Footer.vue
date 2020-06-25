@@ -3,11 +3,11 @@
         <v-card
                 flat
                 tile
-                class="teal darken-1 white--text text-center"
+                class="secondary white--text text-center"
                 min-width="100%"
         >
 
-            <v-card-text class="white--text py-2">
+            <v-card-text class="onSecondary--text py-2">
                 APP NAME
             </v-card-text>
 

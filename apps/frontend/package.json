@@ -15,7 +15,7 @@
     "apollo-upload-client": "^13.0.0",
     "chart.js": "^2.9.3",
     "chartjs-plugin-labels": "^1.1.0",
-    "@ci-user-module/frontend": "^1.0.25",
+    "@ci-user-module/frontend": "^1.0.36",
     "@ci-custom-module/frontend": "^1.0.6",
     "core-js": "^3.6.5",
     "graphql": "^15.0.0",
