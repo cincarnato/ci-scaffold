@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  scaffold:
+    image: cincarnato/ci-scaffold
+    container_name: ci_scaffold
+    volumes:
+      - ./media:/apps/api/dist/media
+      - ./logs:/apps/api/dist/logs
+      - ./.env:/apps/api/dist/.env
+    ports:
+      - "80:5000"
+    networks:
+      - "host"

@@ -3,7 +3,7 @@ import express from 'express';
 import './mongo-db'
 import {ApolloServer, GraphQLExtension} from 'apollo-server-express'
 import {resolvers, typeDefs} from './modules-merge'
-
+import path from 'path'
 import {jwtMiddleware, corsMiddleware, rbacMiddleware, sessionMiddleware} from '@ci-user-module/api'
 
 import {expressRequestLogger, graphqlErrorLogger, graphqlResponseLogger} from './logger'
@@ -51,6 +51,10 @@ app.use('/media/avatar', express.static('media/avatar'));
 app.use('/media/logo', express.static('media/logo'));
 app.use('/media/export', express.static('media/export'));
 app.use('/', express.static('web',{index: "index.html"}));
+
+app.get('*', function (request, response) {
+    response.sendFile(path.resolve(__dirname, 'web/index.html'));
+});
 
 //status
 app.get('/status', function(req,res){res.send("RUNNING")})

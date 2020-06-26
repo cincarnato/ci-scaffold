@@ -4,23 +4,19 @@ RUN apk add bash
 
 RUN npm install pm2 -g
 
+COPY ./apps /apps
+
 #API
-COPY ./apps/api/ /app/api/
-
-WORKDIR /app/api
-
+WORKDIR /apps/api
 RUN npm install
 RUN npm run build
 
 #Frontend
-COPY ./apps/frontend/ /app/frontend/
-WORKDIR /app/api/dist/frontend
+WORKDIR /apps/frontend
 RUN npm install
 RUN npm run build
 
-
 #Start
-WORKDIR /app/api/dist
-EXPOSE 80
+WORKDIR /apps/api/dist
 
 CMD ["pm2-runtime", "start", "index.js"]
