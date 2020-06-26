@@ -1,6 +1,5 @@
 require('dotenv').config();
 import express from 'express';
-//const express = require('express')
 import './mongo-db'
 import {ApolloServer, GraphQLExtension} from 'apollo-server-express'
 import {resolvers, typeDefs} from './modules-merge'
@@ -51,6 +50,7 @@ apolloServer.applyMiddleware({app})
 app.use('/media/avatar', express.static('media/avatar'));
 app.use('/media/logo', express.static('media/logo'));
 app.use('/media/export', express.static('media/export'));
+app.use('/', express.static('web',{index: "index.html"}));
 
 //status
 app.get('/status', function(req,res){res.send("RUNNING")})

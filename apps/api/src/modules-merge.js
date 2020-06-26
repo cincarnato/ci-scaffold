@@ -1,5 +1,6 @@
 import {mergeTypes, mergeResolvers} from 'merge-graphql-schemas';
 import {securityResolvers,securityTypes} from '@ci-user-module/api'
+
 import {types as customTypes,resolvers as customResolvers} from '@ci-custom-module/api'
 
 //BASE RESOLVERS

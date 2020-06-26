@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build --dest ../api/dist/web --mode production"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.6.6",
@@ -15,7 +15,7 @@
     "apollo-upload-client": "^13.0.0",
     "chart.js": "^2.9.3",
     "chartjs-plugin-labels": "^1.1.0",
-    "@ci-user-module/frontend": "^1.0.36",
+    "@ci-user-module/frontend": "^1.0.39",
     "@ci-custom-module/frontend": "^1.0.6",
     "core-js": "^3.6.5",
     "graphql": "^15.0.0",
