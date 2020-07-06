@@ -19,4 +19,6 @@ RUN npm run build
 #Start
 WORKDIR /apps/api/dist
 
-CMD ["pm2-runtime", "start", "index.js"]
+COPY ./docker-entrypoint.sh /apps/api/dist/docker-entrypoint.sh
+
+ENTRYPOINT ["/apps/api/dist/docker-entrypoint.sh"]
