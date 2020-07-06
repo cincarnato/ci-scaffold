@@ -31,6 +31,9 @@
             return {
                 menu: menuConfig
             }
+        },
+        mounted() {
+            this.$store.dispatch('checkAuth')
         }
     };
 </script>
