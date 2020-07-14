@@ -8,17 +8,20 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
 mongoose.set('useCreateIndex', true)
 
 import {InitService} from '@ci-user-module/api'
-import {initCustomization,initPermissionsCustomization} from '@ci-custom-module/api'
+import {initPermissionsCustomization} from '@ci-custom-module/api'
+import {initCustomization} from './custom/initCustomization'
+import operatorRole from './custom/initOperatorRole'
 
-const init = async () => {
+const initService = async () => {
     await InitService.initPermissions()
     await initPermissionsCustomization()
     await InitService.initAdminRole()
-    await InitService.initRoles()
+    await InitService.initRoles([operatorRole])
     await InitService.initRootUser()
     await initCustomization()
     console.log("Done")
-    process.exit()
 }
 
-init()
+export {initService}
+
+export default initService

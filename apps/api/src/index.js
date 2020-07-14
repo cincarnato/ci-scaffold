@@ -1,4 +1,5 @@
 require('dotenv').config();
+import initService from "./service/init-service";
 import express from 'express';
 import './mongo-db'
 import {ApolloServer, GraphQLExtension} from 'apollo-server-express'
@@ -59,4 +60,9 @@ app.get('*', function (request, response) {
 //status
 app.get('/status', function(req,res){res.send("RUNNING")})
 
-app.listen(process.env.APP_PORT, () => console.log(`Server started :). URL: http://localhost:${process.env.APP_PORT}${apolloServer.graphqlPath}`))
+//initialize permissions, roles, users, customs, seeds
+initService().then(() => {
+    app.listen(process.env.APP_PORT, () => console.log(`Server started: http://localhost:${process.env.APP_PORT}`))
+}).catch( err => {
+    console.err(err)
+})
