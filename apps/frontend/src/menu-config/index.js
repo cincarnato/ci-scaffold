@@ -6,12 +6,7 @@ export default [
         link: { name: "home" },
         panel: false
     },
-    {
-        icon: 'perm_phone_msg',
-        text: i18n.t('base.about'),
-        link: { name: "about" },
-        panel: false,
-    },
+
     {
         icon: 'person',
         text: 'Administrador',
@@ -55,7 +50,13 @@ export default [
             },
 
         ]
-    }
+    },
+    {
+        icon: 'perm_phone_msg',
+        text: i18n.t('base.about'),
+        link: { name: "about" },
+        panel: false,
+    },
 
 
 ]
