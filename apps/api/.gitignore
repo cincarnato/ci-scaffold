@@ -1,5 +1,6 @@
 
 media/avatar/*
+!media/avatar/user.png
 media/logo/*
 !media/logo/logo.png
 !.gitkeep
