@@ -1,5 +1,5 @@
 require('dotenv').config();
-import initService from "./service/init-service";
+import initService from "./init/init-service";
 import express from 'express';
 import './mongo-db'
 import {ApolloServer, GraphQLExtension} from 'apollo-server-express'

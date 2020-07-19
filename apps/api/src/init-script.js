@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
-import initService from "./service/init-service";
+import initService from "./init/init-service";
 
 
 initService().then(()=>{
