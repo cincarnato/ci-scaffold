@@ -7,7 +7,9 @@
     "build": "vue-cli-service build --dest ../api/dist/web --mode production",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@ci-common-module/frontend": "^1.0.15",
@@ -35,6 +37,11 @@
     "vuex-persistedstate": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/vue": "^5.3.19",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-plugin-unit-jest": "^4.4.6",
@@ -42,9 +49,12 @@
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.4.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-vue": "^2.0.2",
     "deepmerge": "^4.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "flush-promises": "^1.0.2",
     "graphql-tag": "^2.10.3",
     "jest": "^25.4.0",
     "jest-transform-graphql": "^2.1.0",
@@ -53,8 +63,7 @@
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-vuetify": "~2.0.5",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.3.0",
-    "flush-promises": "^1.0.2"
+    "vuetify-loader": "^1.3.0"
   },
   "eslintConfig": {
     "root": true,
